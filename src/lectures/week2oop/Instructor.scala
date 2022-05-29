@@ -26,7 +26,7 @@ class Course(val courseID:Int, val title:String, var releaseYear:String, val ins
     def getID(): String = s"${this.courseID}${this.instructor.id}"
 
     //isTaughtBy(instructor): проверяет, является ли указанный человек инструктором курса
-    def isTaughtBy(instructor: Instructor): Boolean = {if(instructor==this.instructor) true else false}
+    def isTaughtBy(instructor: Instructor) = this.instructor==instructor
 
 
     //copyCourse(newReleaseYear): возвращает новый экземпляр класса Course с обновленным значением поля releaseYear
